@@ -9,11 +9,12 @@ import {
 
 const getStyleName = (btn: string) => {
     const className: any = {
-        '=': 'equals',
+        0: 'equals',
         'x': 'opt',
         '-': 'opt',
         '+': 'opt',
         '/': 'opt',
+        '=': 'opt',
     }
     return className[btn]
 }
@@ -25,7 +26,7 @@ export const Button = ({value}: { value: any }) => {
 
         const results: any = {
             '.': () => dispatch(counterSlice.actions.commaClick('.')),
-            'C': () => dispatch(counterSlice.actions.resetClick('C')),
+            'AC': () => dispatch(counterSlice.actions.resetClick('C')),
             '/': () => dispatch(counterSlice.actions.signClick('/')),
             'x': () => dispatch(counterSlice.actions.signClick('x')),
             '-': () => dispatch(counterSlice.actions.signClick('-')),
@@ -45,8 +46,8 @@ export const Button = ({value}: { value: any }) => {
 
     return (
         <button onClick={handleBtnClick}
-                className={`${styledName ? styledName : 'bg-gray-400'} h-14 flex items-center justify-center cursor-pointer text-[#242424] 
-                text-2xl p-2.5 rounded-[10px] border-[none] hover:border-2 hover:border-dotted hover:border-[#242424]`}>{value}</button>
+                className={`${styledName ? styledName : 'bg-stone-500'} text-white h-14 flex items-center justify-center cursor-pointer
+                text-2xl p-2.5 border-[none] hover:border-2 hover:border-dotted hover:border-[#242424]`}>{value}</button>
     )
 }
 
