@@ -5,26 +5,18 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 /* Instruments */
-import styles from '../styles/layout.module.css'
+import '../styles/globals.css'
 
 export const Nav = () => {
   const pathname = usePathname()
 
   return (
-    <nav className={styles.nav}>
+    <nav className='nav'>
       <Link
-        className={`${styles.link} ${pathname === '/' ? styles.active : ''}`}
+        className={`text-purple-700 hover:underline ${pathname === '/' ? 'underline' : ''}`}
         href="/"
       >
         Home
-      </Link>
-      <Link
-        className={`${styles.link} ${
-          pathname === '/verify' ? styles.active : ''
-        }`}
-        href="/verify"
-      >
-        Verify
       </Link>
     </nav>
   )

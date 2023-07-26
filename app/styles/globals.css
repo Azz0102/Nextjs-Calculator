@@ -1,16 +1,74 @@
-html,
-body {
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  font-family: system-ui, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*html,*/
+/*body {*/
+/*  min-height: 100vh;*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*  font-family: system-ui, sans-serif;*/
+/*}*/
+
+/*a {*/
+/*  color: inherit;*/
+/*  text-decoration: none;*/
+/*}*/
+
+/** {*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+@layer base {
+    html,
+    body {
+        @apply min-h-screen m-0 p-0;
+        @apply font-sans;
+    }
+
+    a {
+        @apply text-inherit no-underline;
+    }
+
+    * {
+        @apply box-border;
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+    .container {
+        @apply grid grid-rows-[auto_auto_1fr_36px] items-center min-h-screen ml-40;
+        grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+    }
 
-* {
-  box-sizing: border-box;
+    .header {
+        grid-area: header;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        @apply justify-self-center;
+        grid-area: footer;
+    }
+
+    .nav {
+        @apply flex items-center justify-center gap-2 text-[calc(10px_+_2vmin)] p-2;
+        grid-area: nav;
+    }
+    .header,
+    .main {
+        @apply flex flex-col items-center justify-center;
+    }
+    .equals {
+        @apply col-[3/5] bg-green-400;
+    }
+    .opt {
+        @apply bg-amber-400;
+    }
 }
