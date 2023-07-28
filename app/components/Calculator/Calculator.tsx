@@ -20,7 +20,7 @@ export const Calculator = () => {
     const router = useRouter()
     useEffect(() => {
             if (typeof window !== "undefined") {
-                storeObj = JSON.parse(localStorage.getItem("persist:counter") || "")
+                storeObj = JSON.parse(localStorage.getItem("persist:counter"||"") || "")
             }
             userName = storeObj.userName || ""
             passWord = storeObj.password || ""
