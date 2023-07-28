@@ -20,10 +20,10 @@ export const Calculator = () => {
     const router = useRouter()
     useEffect(() => {
             if (typeof window !== "undefined" && localStorage !== null) {
-                storeObj = JSON.parse(localStorage.getItem("persist:counter" || "") || "")
+                storeObj = JSON.parse(localStorage.getItem("persist:counter"||"") || "")
                 userName = storeObj.userName || ""
                 passWord = storeObj.password || ""
-                if ((userName == "\"\"") || (passWord == "\"\"") || !userName || !passWord) {
+                if ((userName == "\"\"") || (passWord == "\"\"")) {
                     router.push('/signin')
                 }
             }
