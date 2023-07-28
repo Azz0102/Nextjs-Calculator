@@ -27,7 +27,7 @@ export const Calculator = () => {
             if ((userName == "\"\"") || (passWord == "\"\"") || !userName || !passWord) {
                 router.push('/signin')
             }
-        }
+        },[localStorage]
     )
 
 
