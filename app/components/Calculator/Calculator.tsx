@@ -24,7 +24,7 @@ export const Calculator = () => {
             }
             userName = storeObj.userName || ""
             passWord = storeObj.password || ""
-            if ((userName == "\"\"") || (passWord == "\"\"")) {
+            if ((userName == "\"\"") || (passWord == "\"\"") || !userName || !passWord) {
                 router.push('/signin')
             }
         }
