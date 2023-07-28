@@ -6,7 +6,9 @@ import {createSlice, type PayloadAction} from '@reduxjs/toolkit'
 const initialState: CounterSliceState = {
     sign: '',
     num: 0,
-    res: 0
+    res: 0,
+    userName: '',
+    passWord: ''
 }
 
 export const counterSlice = createSlice({
@@ -75,6 +77,12 @@ export const counterSlice = createSlice({
         invertClick: (state, action) => {
             state.num = state.num ? state.num * -1 : 0
             // state.res = state.res ? state.res * -1 : 0
+        },
+        userNameInput: (state, action) => {
+            state.userName = action.payload
+        },
+        passWordInput: (state, action) => {
+            state.passWord = action.payload
         }
     },
 })
@@ -83,5 +91,7 @@ export const counterSlice = createSlice({
 export interface CounterSliceState {
     sign: string,
     num: any,
-    res: any
+    res: any,
+    userName: string,
+    passWord: string
 }

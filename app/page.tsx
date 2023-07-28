@@ -1,10 +1,15 @@
 /* Components */
-// import { Counter } from './components/Counter/Counter'
+
 import {Calculator} from './components/Calculator/Calculator'
+import React from "react";
+
+
 export default function IndexPage() {
-  return <Calculator />
+    return (<div>
+        <Calculator/>
+    </div>)
 }
 
 export const metadata = {
-  title: 'Redux Calculator',
+    title: 'huy',
 }
