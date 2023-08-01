@@ -14,9 +14,9 @@ export const TextInput = ({label, ...props}: {
     return (
         <>
             <label htmlFor={props.name}>{label}</label>
-            <input className="text-base mx-0 my-2.5 p-[15px] border-0 bg-slate-300" {...field} {...props} />
+            <input className="text-base mx-0 my-2.5 p-4 border-0 bg-slate-300" {...field} {...props} />
             {meta.touched && meta.error ? (
-                <div className="text-sm text-[red] mb-[15px]">{meta.error}</div>
+                <div className="text-sm text-[red] mb-4">{meta.error}</div>
             ) : null}
         </>
     );

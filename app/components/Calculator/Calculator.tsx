@@ -5,7 +5,8 @@ import {Screen} from '../Screen/Screen'
 import {ButtonBox} from '../ButtonBox/ButtonBox'
 import {Button} from '../Button/Button'
 import {useRouter} from "next/navigation";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
+import {useSelector,selectPassword,selectUserName} from "@/lib/redux";
 
 const btnValues = [
     ["AC", "+/-", "%", "/"],
@@ -16,21 +17,6 @@ const btnValues = [
 ];
 
 export const Calculator = () => {
-    let userName: string, passWord: string, storeObj: any
-    const router = useRouter()
-    useEffect(() => {
-            if (typeof window !== "undefined") {
-                storeObj = JSON.parse(localStorage.getItem("persist:counter") || '{}')
-                userName = storeObj.userName || "\"\""
-                passWord = storeObj.passWord || "\"\""
-                console.log(passWord)
-                if ((userName == "\"\"") || (passWord == "\"\"")) {
-                    router.push('/signin')
-                }
-            }
-        }
-    )
-
 
     return (
         <Wrapper>
