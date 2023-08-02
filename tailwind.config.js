@@ -18,13 +18,20 @@ module.exports = {
         //     }
         // },
     },
-    plugins: [plugin(function ({addUtilities}) {
+    plugins: [plugin(function ({addUtilities, addComponents}) {
         addUtilities({
             '.shadow1': {
                 'text-color': 'rgba(var(--color-primary), 0.2)',
             },
             '.shadow2': {
                 'text-color': 'rgba(var(--color-primary), 0.24)',
+            }
+        })
+        addComponents({
+            '.screenheight': {
+                '@media (max-height: 720px)': {
+                    marginTop: '40rem',
+                }
             }
         })
     })],

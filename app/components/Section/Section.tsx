@@ -1,6 +1,8 @@
 import {useRouter} from "next/navigation";
 import {selectPassword, selectUserName, useSelector} from "@/lib/redux";
 import React, {useEffect} from "react";
+import {Footer} from "@/app/components/Footer/Footer";
+import {Header} from "@/app/components/NavBar/Nav";
 
 export const Section = ({children}: { children: React.ReactNode }) => {
     const router = useRouter()

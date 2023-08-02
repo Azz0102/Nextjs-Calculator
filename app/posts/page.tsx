@@ -2,7 +2,6 @@ import React, {Suspense} from "react";
 import {getPost} from "@/app/posts/getPost";
 import Loading from "@/app/posts/loading";
 import {PostForm} from "@/app/components/PostForm/PostForm";
-import {PostList} from "@/app/posts/PostList";
 import {Post} from "@/app/components/Post/Post";
 import {CmtList} from "@/app/components/Post/CmtList";
 

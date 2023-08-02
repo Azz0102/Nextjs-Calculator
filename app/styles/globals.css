@@ -1,22 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/*html,*/
-/*body {*/
-/*  min-height: 100vh;*/
-/*  padding: 0;*/
-/*  margin: 0;*/
-/*  font-family: system-ui, sans-serif;*/
-/*}*/
-
-/*a {*/
-/*  color: inherit;*/
-/*  text-decoration: none;*/
-/*}*/
-
-/** {*/
-/*  box-sizing: border-box;*/
-/*}*/
 
 @layer base {
     :root {
@@ -40,34 +24,17 @@
 
 @layer components {
     .container {
-        @apply grid grid-rows-[auto_auto_1fr_36px] items-center min-h-screen;
-        grid-template-areas:
-    "nav"
-    "header"
-    "main"
-    "footer";
-    }
-
-    .header {
-        grid-area: header;
-    }
-
-    .main {
-        @apply justify-center ml-0 2xl:ml-80;
-        grid-area: main;
+        @apply flex flex-col min-h-screen m-auto;
     }
 
     .footer {
         @apply justify-self-center;
-        grid-area: footer;
     }
 
     .nav {
-        @apply flex flex-row items-center gap-2 text-[calc(10px_+_2vmin)] p-2 bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600;
-        grid-area: nav;
+        @apply border-gray-200 bg-gray-500 w-full fixed z-20;
     }
 
-    .header,
     .main {
         @apply flex flex-col items-center justify-center;
     }

@@ -13,7 +13,7 @@ export default function IndexPage() {
 
     return (
         <div
-            className='w-80 bg-indigo-400 shadow-[0_0_20px_0_shadow1,0_5px_5px_0_shadow2] p-2.5'>
+            className='w-80 bg-indigo-400 shadow-[0_0_20px_0_shadow1,0_5px_5px_0_shadow2] p-2.5 mt-60'>
             <h1 className='text-center p-3.5 text-4xl text-amber-600'>Sign In</h1>
             <Formik
                 initialValues={{

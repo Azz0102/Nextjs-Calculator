@@ -7,9 +7,5 @@ export async function submitPostHandler(value: any) {
         userId: 1,
         title: value.title,
         body: value.body
-    },{
-        headers: {
-            'Content-Type': 'multipart/form-data'
-        }
     })
 }
