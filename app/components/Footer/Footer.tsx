@@ -12,9 +12,6 @@ export const Footer = () => {
                             <a href="/" className="hover:underline">Careers</a>
                         </li>
                         <li className="mb-4">
-                            <a href="/" className="hover:underline">Brand Center</a>
-                        </li>
-                        <li className="mb-4">
                             <a href="/" className="hover:underline">Blog</a>
                         </li>
                     </ul>
