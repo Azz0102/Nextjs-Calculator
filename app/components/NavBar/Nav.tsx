@@ -16,53 +16,39 @@ export const Header = () => {
     const [isToggle, setIsToggle] = useState(false)
     return (
         <nav className='nav'>
-            <div className='flex flex-col items-center md:justify-normal md:flex-row gap-2 p-2 m-2'>
-                <button data-collapse-toggle="navbar-solid-bg" type="button"
-                        className={`inline-flex self-end items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg 
-                        md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400
-                        dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${pathname === '/signin' ? 'hidden' : ''}`}
+            <div className="px-4 mx-auto md:flex md:items-center">
+                <div className="flex justify-between items-center">
+                    <a href={`${pathname === '/signin' ? '/signin' : '/'}`}
+                       className="font-bold text-xl text-indigo-600">HUY</a>
+                    <button
+                        className={`${pathname === '/signin' ? 'hidden' : 'md:hidden'} border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 `}
                         onClick={() => setIsToggle(!isToggle)}>
-                    <span className="sr-only">Open main menu</span>
-                    <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                         viewBox="0 0 17 14">
-                        <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </button>
-                <div className={`${isToggle ? 'block' : 'hidden'} w-full md:block`}>
-                    <div
-                        className="flex flex-col font-medium md:text-2xl mt-4 rounded-lg bg-gray-500 md:flex-row md:justify-normal
-                         md:items-center md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent dark:border-gray-700">
-                        <a
-                            className={`block py-2 pl-3 pr-4 ${pathname === '/' ? 'text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900'} 
-                                rounded md:bg-transparent md:p-2 md:mr-2 md:dark:bg-transparent hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 ${pathname === '/signin' ? 'hidden' : ''}`}
-                            aria-current="page"
-                            href="/" onClick={() => setIsToggle(false)}
-                        >
-                            {pathname !== '/signin' ? 'Home' : ''}
-                        </a>
-                        <a
-                            className={`block py-2 pl-3 pr-4 ${pathname === '/posts' ? 'text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900'} 
-                                rounded md:bg-transparent  md:p-0 md:dark:bg-transparent hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 
-                                ${pathname === '/signin' ? 'hidden' : ''} md:mr-auto`}
-                            href="/posts" onClick={() => setIsToggle(false)}
-                        >
-                            {pathname !== '/signin' ? 'Post' : ''}
-                        </a>
-                        <button
-                            className={`block py-2 pl-3 pr-4 rounded hover:bg-red-700 md:hover:bg-transparent 
-                                    md:focus:outline-none md:text-white md:bg-red-700 md:hover:bg-red-800 md:focus:ring-4
-                                    md:focus:ring-red-300 md:font-medium md:rounded-lg md:text-sm md:px-5 md:py-2.5 md:dark:bg-red-600 md:basis-32
-                                    md:dark:hover:bg-red-700 md:dark:focus:ring-red-900 ${pathname === '/signin' ? 'invisible' : ''}`}
-                            onClick={() => {
-                                setIsToggle(false)
-                                dispatch(counterSlice.actions.userNameInput(''))
-                                dispatch(counterSlice.actions.passWordInput(''))
-                                dispatch(counterSlice.actions.resetClick(''))
-                                router.push('/signin')
-                            }}
-                        >Sign out
-                        </button>
-                    </div>
+                        <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                             viewBox="0 0 17 14">
+                            <path stroke="currentColor" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div
+                    className={`${isToggle || pathname !== '/signin' ? 'flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0' : 'hidden'} `}>
+                    <a href="/" className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-600"
+                       onClick={() => setIsToggle(false)}>Home</a>
+                    <a href="/posts"
+                       className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+                       onClick={() => setIsToggle(false)}>Posts</a>
+                    {/*<a href="#"*/}
+                    {/*   className="p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-transparent rounded hover:bg-indigo-100 hover:text-indigo-700 transition-colors duration-300">Login</a>*/}
+                    <a
+                        className="p-2 lg:px-4 md:mx-2 text-red-700 text-center border border-solid border-red-700 rounded hover:bg-red-700 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+                        onClick={() => {
+                            setIsToggle(false)
+                            dispatch(counterSlice.actions.userNameInput(''))
+                            dispatch(counterSlice.actions.passWordInput(''))
+                            dispatch(counterSlice.actions.resetClick(''))
+                            router.push('/signin')
+                        }}
+                    >Signout</a>
                 </div>
             </div>
         </nav>
