@@ -16,7 +16,7 @@ export const Header = () => {
     const [isToggle, setIsToggle] = useState(false)
     return (
         <nav className='nav'>
-            <div className="px-4 mx-auto md:flex md:items-center">
+            <div className="px-12 mx-auto md:flex md:items-center">
                 <div className="flex justify-between items-center">
                     <a href={`${pathname === '/signin' ? '/signin' : '/'}`}
                        className="font-bold text-xl text-indigo-600">HUY</a>
@@ -29,25 +29,26 @@ export const Header = () => {
                         </svg>
                     </button>
                 </div>
-
-                <div
-                    className={`${isToggle || pathname !== '/signin' ? 'flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0' : 'hidden'} `}>
-                    <a href="/"
-                       className={`p-2 lg:px-4 md:mx-2 ${pathname === '/' ? ' text-white rounded bg-indigo-600' : 'text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300'}`}
-                       onClick={() => setIsToggle(false)}>Home</a>
-                    <a href="/posts"
-                       className={`p-2 lg:px-4 md:mx-2 ${pathname === '/posts' ? ' text-white rounded bg-indigo-600' : 'text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300'}`}
-                       onClick={() => setIsToggle(false)}>Posts</a>
-                    <a
-                        className="p-2 lg:px-4 md:mx-2 text-red-700 text-center border border-solid border-red-700 rounded cursor-pointer hover:bg-red-700 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
-                        onClick={() => {
-                            setIsToggle(false)
-                            dispatch(counterSlice.actions.userNameInput(''))
-                            dispatch(counterSlice.actions.passWordInput(''))
-                            dispatch(counterSlice.actions.resetClick(''))
-                            router.push('/signin')
-                        }}
-                    >Signout</a>
+                <div className={`${pathname === '/signin' ? ' hidden' : 'md:ml-auto mt-3 md:mt-0'}`}>
+                    <div
+                        className={` ${isToggle ? 'flex flex-col md:flex-row ' : 'hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0'}`}>
+                        <a href="/"
+                           className={`p-2 lg:px-4 md:mx-2 ${pathname === '/' ? ' text-white rounded bg-indigo-600' : 'text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300'}`}
+                           onClick={() => setIsToggle(false)}>Home</a>
+                        <a href="/posts"
+                           className={`p-2 lg:px-4 md:mx-2 ${pathname === '/posts' ? ' text-white rounded bg-indigo-600' : 'text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300'}`}
+                           onClick={() => setIsToggle(false)}>Posts</a>
+                        <a
+                            className="p-2 lg:px-4 md:mx-2 text-red-700 text-center border border-solid border-red-700 rounded cursor-pointer hover:bg-red-700 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+                            onClick={() => {
+                                setIsToggle(false)
+                                dispatch(counterSlice.actions.userNameInput(''))
+                                dispatch(counterSlice.actions.passWordInput(''))
+                                dispatch(counterSlice.actions.resetClick(''))
+                                router.push('/signin')
+                            }}
+                        >Signout</a>
+                    </div>
                 </div>
             </div>
         </nav>

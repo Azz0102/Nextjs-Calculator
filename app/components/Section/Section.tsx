@@ -1,10 +1,9 @@
-import {useRouter} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import {selectPassword, selectUserName, useSelector} from "@/lib/redux";
 import React, {useEffect} from "react";
-import {Footer} from "@/app/components/Footer/Footer";
-import {Header} from "@/app/components/NavBar/Nav";
 
 export const Section = ({children}: { children: React.ReactNode }) => {
+    const pathname = usePathname()
     const router = useRouter()
     let userName = useSelector(selectUserName)
     let passWord = useSelector(selectPassword)
@@ -12,8 +11,13 @@ export const Section = ({children}: { children: React.ReactNode }) => {
             if (typeof window !== "undefined") {
                 if (!userName || !passWord) {
                     router.push('/signin')
+                } else {
+                    if (pathname === '/signin') {
+                        router.back()
+                    }
                 }
             }
+
         }
     )
     return (<section className='container'>
