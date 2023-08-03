@@ -16,8 +16,8 @@ export const Header = () => {
     const [isToggle, setIsToggle] = useState(false)
     const [isToggleDropDown, setIsToggleDropDown] = useState(false)
     return (
-        <nav className='nav font-semibold '>
-            <div className="px-12 mx-auto md:flex md:items-center md:justify-between">
+        <nav className='nav font-semibold text-xl'>
+            <div className="px-6 mx-auto md:flex md:items-center md:justify-between">
                 <div className="flex justify-between items-center">
                     <a href={`${pathname === '/signin' ? '/signin' : '/'}`}
                        className="font-bold text-xl text-indigo-600">HUY</a>
@@ -43,7 +43,7 @@ export const Header = () => {
                             setIsToggleDropDown(true)
                         }} onMouseLeave={() => {
                             setIsToggleDropDown(false)
-                        }} className='group'>
+                        }} onClick={() => setIsToggleDropDown(!isToggleDropDown)} className='group'>
                             <button
                                 className="w-full md:w-auto flex items-center justify-between p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300">Dropdown <svg
                                 className="transform group-hover:-rotate-180
@@ -54,7 +54,7 @@ export const Header = () => {
                             </svg></button>
                             {/*Dropdown menu*/}
                             <div
-                                className={`w-full md:w-40 md:absolute z-[-1] group-hover:animate-[growDown_300ms_ease-in-out_forwards] group-hover:origin-[top_center] md:top-[58px] 
+                                className={`w-full md:w-40 md:absolute z-[-1] group-hover:animate-[growDown_300ms_ease-in-out_forwards] group-hover:origin-[top_center] md:top-[61px] md:ml-2
                                 ${isToggleDropDown ? 'flex flex-col' : 'hidden'} font-normal bg-white divide-y divide-gray-100 
                                 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}>
                                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-400"
