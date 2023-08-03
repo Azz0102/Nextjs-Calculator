@@ -32,15 +32,14 @@ export const Header = () => {
 
                 <div
                     className={`${isToggle || pathname !== '/signin' ? 'flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0' : 'hidden'} `}>
-                    <a href="/" className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-600"
+                    <a href="/"
+                       className={`p-2 lg:px-4 md:mx-2 ${pathname === '/' ? ' text-white rounded bg-indigo-600' : 'text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300'}`}
                        onClick={() => setIsToggle(false)}>Home</a>
                     <a href="/posts"
-                       className="p-2 lg:px-4 md:mx-2 text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+                       className={`p-2 lg:px-4 md:mx-2 ${pathname === '/posts' ? ' text-white rounded bg-indigo-600' : 'text-gray-600 rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300'}`}
                        onClick={() => setIsToggle(false)}>Posts</a>
-                    {/*<a href="#"*/}
-                    {/*   className="p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-transparent rounded hover:bg-indigo-100 hover:text-indigo-700 transition-colors duration-300">Login</a>*/}
                     <a
-                        className="p-2 lg:px-4 md:mx-2 text-red-700 text-center border border-solid border-red-700 rounded hover:bg-red-700 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+                        className="p-2 lg:px-4 md:mx-2 text-red-700 text-center border border-solid border-red-700 rounded cursor-pointer hover:bg-red-700 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
                         onClick={() => {
                             setIsToggle(false)
                             dispatch(counterSlice.actions.userNameInput(''))
