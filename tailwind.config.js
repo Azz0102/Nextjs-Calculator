@@ -11,13 +11,17 @@ module.exports = {
         './src/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-        // extend: {
-        //     colors: {
-        //         'shadow1': 'rgba(var(--color-primary), 0.2)',
-        //         'shadow2': 'rgba(var(--color-primary), 0.24)'
-        //     }
-        // },
+        extend: {
+            keyframes: {
+                growDown: {
+                    '0%': {transform: ' scaleY(0)'},
+                    '80%': {transform: 'scaleY(1.1)'},
+                    '100%': {transform: 'scaleY(1)'},
+                },
+            }
+        }
     },
+
     plugins: [plugin(function ({addUtilities, addComponents}) {
         addUtilities({
             '.shadow1': {
