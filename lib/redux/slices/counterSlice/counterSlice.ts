@@ -8,7 +8,8 @@ const initialState: CounterSliceState = {
     num: 0,
     res: 0,
     userName: '',
-    passWord: ''
+    passWord: '',
+    overflow: false
 }
 
 export const counterSlice = createSlice({
@@ -83,6 +84,9 @@ export const counterSlice = createSlice({
         },
         passWordInput: (state, action) => {
             state.passWord = action.payload
+        },
+        setOverflow: (state, action) => {
+            state.overflow = action.payload
         }
     },
 })
@@ -93,5 +97,6 @@ export interface CounterSliceState {
     num: any,
     res: any,
     userName: string,
-    passWord: string
+    passWord: string,
+    overflow: boolean
 }

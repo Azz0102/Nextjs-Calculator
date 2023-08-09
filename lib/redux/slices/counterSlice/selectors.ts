@@ -10,3 +10,5 @@ export const selectRes = (state: ReduxState) => state.res
 
 export const selectUserName = (state: ReduxState)=> state.userName
 export const selectPassword = (state: ReduxState) => state.passWord
+
+export const selectOverflow = (state: ReduxState) => state.overflow
