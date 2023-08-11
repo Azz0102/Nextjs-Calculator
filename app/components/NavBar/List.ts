@@ -12,27 +12,27 @@ export const rightList = [
     {
         id: '1', list: [
             {
-                style: 'normal', name: 'CRM', bg: '--zp-crm-bp', content: 'Chuyển đổi khách hàng tiềm năng và chốt giao dịch bán hàng nhanh hơn.',
+                style: 'normal', name: 'CRM', bg: 'bg-[-320px_0]', content: 'Chuyển đổi khách hàng tiềm năng và chốt giao dịch bán hàng nhanh hơn.',
                 link: '/'
             },
-            {style: 'normal', name: 'Forms', bg: '--zp-forms-bp', content: 'Tạo biểu mẫu trực tuyến cho mọi nhu cầu kinh doanh.', link: '/'},
+            {style: 'normal', name: 'Forms', bg: 'bg-[-560px_0]', content: 'Tạo biểu mẫu trực tuyến cho mọi nhu cầu kinh doanh.', link: '/'},
             {
-                style: 'normal', name: 'SalesIQ', bg: '--zp-salesiq-bp',
+                style: 'normal', name: 'SalesIQ', bg: 'bg-[-360px_0]',
                 content: 'Ứng dụng chat trực tiếp để tương tác và chuyển đổi người truy cập website.', link: '/'
             },
-            {style: 'normal', name: 'Bookings', bg: '--zp-bookings-bp', content: 'Ứng dụng lên lịch cuộc hẹn để tư vấn cho khách hàng.', link: '/'},
+            {style: 'normal', name: 'Bookings', bg: 'bg-[-320px_-80px]', content: 'Ứng dụng lên lịch cuộc hẹn để tư vấn cho khách hàng.', link: '/'},
             {
-                style: 'normal', name: 'Bigin', bg: '--zp-bigin-bp',
+                style: 'normal', name: 'Bigin', bg: 'bg-[-440px_-80px]',
                 content: 'Giải pháp quản lý quy trình cho các nhóm tương tác trực tiếp với khách hàng.', link: '/'
             },
-            {style: 'normal', name: 'Sign', bg: '--zp-sign-bp', content: 'Ứng dụng chữ ký số cho doanh nghiệp.', link: '/'},
+            {style: 'normal', name: 'Sign', bg: 'bg-[-640px_0]', content: 'Ứng dụng chữ ký số cho doanh nghiệp.', link: '/'},
             {
-                style: 'normal', name: 'RouteIQ', bg: '--zp-routeiq-bp',
+                style: 'normal', name: 'RouteIQ', bg: 'bg-[-320px_-160px]',
                 content: 'Giải pháp trực quan hóa bản đồ bán hàng toàn diện và hoạch định lộ trình tối ưu.', link: '/'
             },
-            {style: 'beta', name: 'Thrive', bg: '--zp-thrive-bp', content: 'Nền tảng quản lý liên kết và lòng trung thành hoàn chỉnh.', link: '/'},
+            {style: 'beta', name: 'Thrive', bg: 'bg-[-280px_-160px]', content: 'Nền tảng quản lý liên kết và lòng trung thành hoàn chỉnh.', link: '/'},
             {
-                style: 'app', name: 'CRM Plus', bg: '--zp-crmplus-bp', content: 'Nền tảng hợp nhất để mang lại trải nghiệm khách hàng hàng đầu.',
+                style: 'app', name: 'CRM Plus', bg: 'bg-[0_0]', content: 'Nền tảng hợp nhất để mang lại trải nghiệm khách hàng hàng đầu.',
                 link: '/'
             },
         ]
@@ -40,14 +40,14 @@ export const rightList = [
     , {
         id: '2', list: [
             {
-                style: 'normal', name: 'Social', bg: '--zp-social-bp',
+                style: 'normal', name: 'Social', bg: 'bg-[-480px_0]',
                 content: 'Phần mềm quản lý mạng xã hội đa năng.', link: '/'
             },
             {
-                style: 'normal', name: 'Campaigns', bg: '--zp-campaigns-bp',
+                style: 'normal', name: 'Campaigns', bg: 'bg-[-440px_0]',
                 content: 'Tạo, gửi và theo dõi các chiến dịch email có mục tiêu nhằm thúc đẩy doanh số bán hàng.', link: '/'
             },
-            {style: 'normal', name: 'Forms', bg: '--zp-forms-bp', content: 'Tạo biểu mẫu trực tuyến cho mọi nhu cầu kinh doanh.', link: '/'},
+            {style: 'normal', name: 'Forms', bg: 'bg-[-560px_0]', content: 'Tạo biểu mẫu trực tuyến cho mọi nhu cầu kinh doanh.', link: '/'},
             {
                 style: 'normal', name: 'Survey', bg: '--zp-survey-bp', content: 'Thiết kế khảo sát để tiếp cận và tương tác với đối tượng của bạn.',
                 link: '/'
@@ -393,9 +393,9 @@ export const slideList = [
 ]
 
 export const languageList = [
-    {id: 1, bg: '-1px_0', name: 'English'}, {id: 2, bg: '-1px_0', name: 'Español'}, {id: 3, bg: '-198px_0', name: 'Português (Brasil)'},
-    {id: 4, bg: '-110px_0', name: 'Deutsch'}, {id: 5, bg: '-88px_0', name: 'Français'}, {id: 6, bg: '-242px_0', name: 'Nederlands'},
-    {id: 7, bg: '-1px_0', name: 'العربية'}, {id: 8, bg: '-440px_0', name: 'Bahasa Indonesia'}, {id: 9, bg: '-418px_0', name: 'ภาษาไทย'},
-    {id: 10, bg: '-154px_0', name: '日本語'}, {id: 11, bg: '-220px_0', name: '简体中文'}, {id: 12, bg: '-352px_0', name: 'Tiếng Việt'},
-    {id: 13, bg: '-132px_0', name: 'Italiano'}, {id: 14, bg: '-484px_0', name: 'עברית'}, {id: 15, bg: '-1px_0', name: '繁体中文'}
+    {id: 1, bg: 'bg-[-1px_0]', name: 'English'}, {id: 2, bg: 'bg-[-1px_0]', name: 'Español'}, {id: 3, bg: 'bg-[-198px_0]', name: 'Português (Brasil)'},
+    {id: 4, bg: 'bg-[-110px_0]', name: 'Deutsch'}, {id: 5, bg: 'bg-[-88px_0]', name: 'Français'}, {id: 6, bg: 'bg-[-242px_0]', name: 'Nederlands'},
+    {id: 7, bg: 'bg-[-1px_0]', name: 'العربية'}, {id: 8, bg: 'bg-[-440px_0]', name: 'Bahasa Indonesia'}, {id: 9, bg: 'bg-[-418px_0]', name: 'ภาษาไทย'},
+    {id: 10, bg: 'bg-[-154px_0]', name: '日本語'}, {id: 11, bg: 'bg-[-220px_0]', name: '简体中文'}, {id: 12, bg: 'bg-[-352px_0]', name: 'Tiếng Việt'},
+    {id: 13, bg: 'bg-[-132px_0]', name: 'Italiano'}, {id: 14, bg: 'bg-[-484px_0]', name: 'עברית'}, {id: 15, bg: 'bg-[-1px_0]', name: '繁体中文'}
 ]

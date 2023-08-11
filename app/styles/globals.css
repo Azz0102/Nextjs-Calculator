@@ -7,6 +7,21 @@
     font-family: Zoho;
 }
 
+@font-face {
+    src: url('../font/OpenSans-Regular.ttf');
+    font-family: OpenSans;
+}
+
+@font-face {
+    src: url('../font/OpenSans-Bold.ttf');
+    font-family: OpenSans-Bold;
+}
+
+@font-face {
+    src: url('../font/OpenSans-SemiBold.ttf');
+    font-family: OpenSans-SemiBold;
+}
+
 @layer base {
     :root {
         --color-primary: 0 0 0;
@@ -257,7 +272,7 @@
         --zp-zillum-dark: url(//www.zohowebstatic.com/sites/zweb/images/productlogos/zillum-dark.svg);
         --zp-zohobigin-dark: url(//www.zohowebstatic.com/sites/zweb/images/productlogos/zohobigin-dark.svg);
         --zp-mail-bp: -360px_-40px;
-        --zp-crm-bp: -320px_0;
+        --zp-crm-bp: 'bg-[320px_0]';
         --zp-desk-bp: -680px_0;
         --zp-salesiq-bp: -360px_0;
         --zp-bigin-bp: -440px_-80px;

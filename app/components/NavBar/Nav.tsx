@@ -69,11 +69,11 @@ export const Header = () => {
                             <ProductDropdown isToggle={isToggle} setIsToggle={setIsToggle}/>
                             <li className='relative inline-block mr-[35px] max-[1023px]:hidden'>
                                 <a href='/'
-                                   className='text-[17px] text-[color:var(--primary-color)] tracking-[-0.2px] transition-[color] duration-[0.4s] ease-[ease] inline-block px-0 py-[9px] font-[opensansregular] hover:text-[color:var(--highlight-color)]'>Khách
+                                   className='text-[17px] text-[color:var(--primary-color)] tracking-[-0.2px] transition-[color] duration-[0.4s] ease-[ease] inline-block px-0 py-[9px] font-opensansregular hover:text-[color:var(--highlight-color)]'>Khách
                                     hàng</a>
                             </li>
                             <CompanyDropDown isToggle={isToggle} setIsToggle={setIsToggle}/>
-                            <li className='relative inline-block mr-[35px] font-[opensansregular] group/item'>
+                            <li className='relative inline-block mr-[35px] font-opensansregular group/item'>
                                 <div className='cursor-pointer inline-block relative px-2.5 py-1 top-0'>
                                     <span className='w-[5px] h-[5px] inline-block bg-[color:var(--primary-color)] mr-[3px] rounded-[50%]'></span>
                                     <span
@@ -84,31 +84,31 @@ export const Header = () => {
                                 <div
                                     className='w-[260px] absolute z-[9999] bg-white shadow-[0_11px_90px_0_rgba(65,67,132,0.13)] origin-[0_0] opacity-0 invisible border translate-y-0 px-0 py-[15px] rounded-[3px] border-solid border-[#e7ebf0] left-0 top-[67px] group-hover/item:opacity-100 group-hover/item:visible group-hover/item:-translate-y-10 group-hover/item:z-[22] duration-[0.2s,0.2s,0.2s] ease-[ease,ease,ease] delay-[0s,0s,0s] transition-[transform,opacity,visibility] pointer-events-auto'>
                                     <ul>
-                                        <li className='font-[opensansregular]'>
+                                        <li className='font-opensansregular'>
                                             <a href='/'
                                                className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Blog</a>
 
                                         </li>
-                                        <li className='font-[opensansregular]'>
+                                        <li className='font-opensansregular'>
                                             <a href='/'
                                                className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Cộng
                                                 đồng</a>
                                             <span
                                                 className='block leading-[0] w-[68%] mt-2.5 mb-[13px] mx-auto border-b-[#e7ebf0] border-b border-solid'></span>
                                         </li>
-                                        <li className='font-[opensansregular]'>
+                                        <li className='font-opensansregular'>
                                             <a href='/'
                                                className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Hợp
                                                 tác với chúng tôi</a>
 
                                         </li>
-                                        <li className='font-[opensansregular]'>
+                                        <li className='font-opensansregular'>
                                             <a href='/'
                                                className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Hỗ
                                                 trợ</a>
 
                                         </li>
-                                        <li className='font-[opensansregular]'>
+                                        <li className='font-opensansregular'>
                                             <a href='/'
                                                className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Liên
                                                 hệ với chúng tôi</a>
@@ -260,7 +260,7 @@ export const Header = () => {
                                                         <div
                                                             className='flex bg-white border flex-col min-h-[355px] cursor-pointer relative overflow-visible w-3/12 transition-all duration-[0.8s] ease-[ease] mr-3 p-0 rounded-[3px] border-solid border-[#e7ebf0] max-[767px]:w-[45%] max-[767px]:ml-0 max-[767px]:mr-[15px] max-[767px]:mt-0 max-[767px]:mb-[15px] max-[1023px]:min-h-[435px] max-[1023px]:w-2/5 max-[1023px]:ml-0 max-[1023px]:mr-[30px] max-[1023px]:mt-0 max-[1023px]:mb-[30px] max-[650px]:min-h-[unset] max-[650px]:w-[70%] max-[650px]:mt-0 max-[650px]:mb-[30px] max-[650px]:mx-0'>
                                                             <div
-                                                                className='bg-[#f60728] z-[2] absolute text-white uppercase text-[10px] pt-0.5 pb-px px-[7px] rounded-tl-none rounded-br-none rounded-bl-none rounded-sm right-0 top-0 font-[opensansregular]'>Tin
+                                                                className='bg-[#f60728] z-[2] absolute text-white uppercase text-[10px] pt-0.5 pb-px px-[7px] rounded-tl-none rounded-br-none rounded-bl-none rounded-sm right-0 top-0 font-opensansregular'>Tin
                                                                 tức
                                                             </div>
                                                             <ul className='relative block mb-[30px]'>
@@ -289,7 +289,7 @@ export const Header = () => {
                                                                         setIndexSlide(indexSlide + 1)
                                                                     }
                                                                 }}></button>
-                                                                <ul className='absolute block w-full [list-style:none] text-center m-0 p-0 -bottom-2.5 font-[opensansregular]'>
+                                                                <ul className='absolute block w-full [list-style:none] text-center m-0 p-0 -bottom-2.5 font-opensansregular'>
                                                                     <li className={`w-1 h-1 inline-block cursor-pointer transition-[0.5s] duration-[ease] mx-0.5 my-0 p-0 rounded-[100%] ${indexSlide
                                                                                                                                                                                            === 1 ?
                                                                                                                                                                                            'bg-[#3f51b6] border border-solid border-[#3f51b6]' :
@@ -321,7 +321,7 @@ export const Header = () => {
                                                                     className='text-[28px] w-full leading-[1.2] tracking-[-0.3px] text-[color:var(--primary-color)] mt-2.5 mb-0.5 mx-auto'>
                                                                     <span className='block'>Bộ ứng dụng email sạch, không có quảng cáo</span>
                                                                 </div>
-                                                                <p className='w-[88%] text-sm text-[color:var(--secondary-color)] leading-[1.7] tracking-[-0.2px] mx-auto my-0 font-[opensansregular]'>Zoho
+                                                                <p className='w-[88%] text-sm text-[color:var(--secondary-color)] leading-[1.7] tracking-[-0.2px] mx-auto my-0 font-opensansregular'>Zoho
                                                                     Mail là nền tảng email bảo mật và mạnh mẽ dành cho các nhóm thuộc mọi quy mô. Dễ
                                                                     dàng
                                                                     bắt đầu hoặc di chuyển.</p>
@@ -343,7 +343,7 @@ export const Header = () => {
                                                             <div
                                                                 className='bg-[#eef5fb] border text-center h-full w-full relative overflow-hidden px-2.5 py-[30px] rounded-[3px] border-solid border-[#e4ecf3] group/div'>
                                                                 <div
-                                                                    className='absolute [background:#049949] text-white uppercase text-[10px] pt-0.5 pb-px px-[7px] rounded-tl-none rounded-br-none rounded-bl-none rounded-sm -right-px -top-px font-[opensansregular]'>mới
+                                                                    className='absolute [background:#049949] text-white uppercase text-[10px] pt-0.5 pb-px px-[7px] rounded-tl-none rounded-br-none rounded-bl-none rounded-sm -right-px -top-px font-opensansregular'>mới
                                                                 </div>
                                                                 <div>
                                                                     <div
@@ -352,7 +352,7 @@ export const Header = () => {
                                                                         className='w-[42px] h-[41px] block [position:inherit] [background:var(--product-icons)_no-repeat] bg-[800px_auto] bg-[position:var(--zp-workplace-bp)] text-2xl tracking-[-0.3px] mt-0 mb-[18px] mx-auto scale-[1.3]'></span>
                                                                         <span className='text-2xl tracking-[-0.3px] block'>Workplace</span>
                                                                     </div>
-                                                                    <p className='text-sm w-full leading-[1.6] text-[color:var(--secondary-color)] tracking-[-0.2px] mt-2.5 mb-[15px] mx-0 font-[opensansregular]'>Trụ
+                                                                    <p className='text-sm w-full leading-[1.6] text-[color:var(--secondary-color)] tracking-[-0.2px] mt-2.5 mb-[15px] mx-0 font-opensansregular'>Trụ
                                                                         sở ảo cho nhóm của bạn với email, chat, tài liệu và nhiều tính năng khác.</p>
                                                                     <div><a className='text-[13px] bg-[color:var(--highlight-color)] text-white inline-block uppercase leading-none transition-[background-color] duration-[0.4s] ease-[ease] border border-[color:var(--highlight-color)] relative tracking-[0.2px] pl-[25px] pr-[38px] py-[13px] rounded-sm border-solid
                                                                 after:bg-[-72px_-76px] after:top-[calc(50%_-_7px)] after:bg-[500px_auto] after:content-[""] after:w-[13px] after:h-[13px] after:absolute after:bg-[image:var(--bg-icon-arrow)] after:bg-no-repeat after:transition-all after:duration-[0.5s] after:ease-[ease] after:scale-100 after:right-3.5 group-hover/div:after:translate-x-[5px]'>Dùng
@@ -370,7 +370,7 @@ export const Header = () => {
                                                             <div
                                                                 className='bg-[#eef5fb] border text-center h-full w-full relative overflow-hidden px-[35px] py-10 rounded-[3px] border-solid border-[#e4ecf3] group/div'>
                                                                 <div
-                                                                    className='absolute [background:#049949] text-white uppercase text-[10px] pt-0.5 pb-px px-[7px] rounded-tl-none rounded-br-none rounded-bl-none rounded-sm -right-px -top-px font-[opensansregular]'>mới
+                                                                    className='absolute [background:#049949] text-white uppercase text-[10px] pt-0.5 pb-px px-[7px] rounded-tl-none rounded-br-none rounded-bl-none rounded-sm -right-px -top-px font-opensansregular'>mới
                                                                 </div>
                                                                 <div>
                                                                     <div
@@ -380,7 +380,7 @@ export const Header = () => {
                                                                              alt="Canvas"/>
                                                                         <span className='text-lg tracking-[-0.3px] block'>cho Zoho CRM</span>
                                                                     </div>
-                                                                    <p className='text-base w-full leading-[1.6] text-[color:var(--secondary-color)] tracking-[-0.2px] mt-0 mb-5 mx-0 my-[15px] font-[opensansregular]'>Studio
+                                                                    <p className='text-base w-full leading-[1.6] text-[color:var(--secondary-color)] tracking-[-0.2px] mt-0 mb-5 mx-0 my-[15px] font-opensansregular'>Studio
                                                                         thiết kế CRM không cần lập trình đầu tiên trong ngành.</p>
                                                                     <div>
                                                                         <a className='text-[color:var(--highlight-color)] uppercase relative tracking-[0.2px] inline-block text-sm pr-7 after:top-[calc(50%_-_7px)] after:bg-[-108px_-76px] after:content-[""] after:w-[13px] after:h-[13px] after:absolute after:bg-[image:var(--bg-icon-arrow)] after:bg-no-repeat after:bg-[500px_auto] after:transition-all after:duration-[0.5s] eafter:ase-[ease] after:scale-100 after:right-[3px] group-hover/div:after:translate-x-[5px]'>Dùng
@@ -408,7 +408,7 @@ export const Header = () => {
                                 <div>
                                     <a className='text-[color:var(--primary-color)] transition-[color] duration-[0.3s] ease-[ease] hover:text-[color:var(--highlight-color)]'>Đăng
                                         nhập</a>
-                                    <a className='text-[#f60014] font-[opensansregular] border bg-transparent transition-[background-color] duration-[0.3s] ease-[ease] tracking-[-0.1px] ml-[25px] px-[13px] py-2 rounded-sm border-solid border-[#f60014] hover:text-white hover:bg-[#f60014]'>Đăng
+                                    <a className='text-[#f60014] font-opensansregular border bg-transparent transition-[background-color] duration-[0.3s] ease-[ease] tracking-[-0.1px] ml-[25px] px-[13px] py-2 rounded-sm border-solid border-[#f60014] hover:text-white hover:bg-[#f60014]'>Đăng
                                         ký</a>
                                 </div>
                             </div>

@@ -6,7 +6,7 @@ import useOnClickOutside from "@/app/helper/OnClickOutSideHook";
 export const ProductDropdown = ({isToggle, setIsToggle}: { isToggle: string, setIsToggle: Dispatch<SetStateAction<string>> }) => {
     const dispatch = useDispatch()
 
-    return <li className='relative inline-block mr-[35px] font-[opensansregular]' >
+    return <li className='relative inline-block mr-[35px] font-opensansregular' >
         <span
             className={`cursor-pointer text-[17px] text-[color:var(--primary-color)] tracking-[-0.2px] transition-[color] duration-[0.4s] ease-[ease]
                 after:text-clip hover:text-[color:var(--highlight-color)] ${isToggle === '1' ? 'text-[color:var(--highlight-color)]'
@@ -27,7 +27,7 @@ export const ProductDropdown = ({isToggle, setIsToggle}: { isToggle: string, set
                                     className={`after:content-[""]
                                         after:inline-block after:relative 
                                         after:clear-both after:ml-[7px] after:transition-all after:duration-[0.3s] after:ease-[ease] after:p-[3.3px] after:border-[solid] after:border-[#777] after:border-r
-                                        after:border-b after:border-t-0 after:border-l-0 after:font-[opensansregular]
+                                        after:border-b after:border-t-0 after:border-l-0 after:font-opensansregular
                                         after:-top-0.5 ${isToggle === '1' ? 'after:rotate-[-135deg] after:border-[color:var(--highlight-color)]'
                                                                             + ' after:top-0.5'
                                                                           : 'after:text-[color:var(--primary-color)] after:rotate-45'}`}>

@@ -24,7 +24,7 @@ export const RightNavBarLi = ({isSelectedLeft, id}: {
                                                                                                                                                                                                                             === 'beta' ?
                                         'Beta' : 'New'}</div>
                                     <span
-                                        className={`w-10 h-10 bg-[800px_auto] absolute mt-0 scale-110 left-0 top-0 bg-[image:var(--product-icons)] bg-no-repeat bg-[${e.bg}]`}></span>
+                                        className={`w-10 h-10 bg-[800px_auto] absolute mt-0 scale-110 left-0 top-0 bg-[image:var(--product-icons)] bg-no-repeat ${e.bg}`}></span>
                                     <span className='w-full block'>
                                 <label
                                     className='text-[22px] tracking-[-0.2px] leading-[1.2] block text-[color:var(--primary-color)] cursor-pointer'>{e.name}</label>
@@ -44,7 +44,7 @@ export const RightNavBarLi = ({isSelectedLeft, id}: {
                                 <a href={e.link}
                                    className='text-xl relative inline-block w-full no-underline text-[color:var(--primary-anchor-clr)] pl-[70px]'>
                             <span
-                                className={`bg-[position:var(${e.bg})] w-10 h-10 bg-[800px_auto] absolute mt-0 scale-[1.4] left-1.5 top-2 bg-[image:var(--product-icons)] bg-no-repeat`}></span>
+                                className={`${e.bg} w-10 h-10 bg-[800px_auto] absolute mt-0 scale-[1.4] left-1.5 top-2 bg-[image:var(--product-icons)] bg-no-repeat`}></span>
                                     <span className='w-full block'>
                                 <label
                                     className='text-[22px] tracking-[-0.2px] leading-[1.2] block text-[color:var(--primary-color)] cursor-pointer'>{e.name}</label>
@@ -92,7 +92,7 @@ export const RightNavBarLi = ({isSelectedLeft, id}: {
                                                                                                                                                                                                                     === 'beta' ?
                                 'Beta' : 'New'}</div>
                             <span
-                                className={`w-10 h-10 bg-[800px_auto] absolute mt-0 scale-110 left-0 top-0 bg-[image:var(--product-icons)] bg-no-repeat bg-[position:var(${e.bg})]`}></span>
+                                className={`w-10 h-10 bg-[800px_auto] absolute mt-0 scale-110 left-0 top-0 bg-[image:var(--product-icons)] bg-no-repeat ${e.bg}`}></span>
                             <span className='w-full block'>
                                 <label
                                     className='text-[22px] tracking-[-0.2px] leading-[1.2] block text-[color:var(--primary-color)] cursor-pointer'>{e.name}</label>
@@ -112,7 +112,7 @@ export const RightNavBarLi = ({isSelectedLeft, id}: {
                         <a href={e.link}
                            className='text-xl relative inline-block w-full no-underline text-[color:var(--primary-anchor-clr)] pl-[70px]'>
                             <span
-                                className={`bg-[position:var(${e.bg})] w-10 h-10 bg-[800px_auto] absolute mt-0 scale-[1.4] left-1.5 top-2 bg-[image:var(--product-icons)] bg-no-repeat`}></span>
+                                className={`${e.bg} w-10 h-10 bg-[800px_auto] absolute mt-0 scale-[1.4] left-1.5 top-2 bg-[image:var(--product-icons)] bg-no-repeat`}></span>
                             <span className='w-full block'>
                                 <label
                                     className='text-[22px] tracking-[-0.2px] leading-[1.2] block text-[color:var(--primary-color)] cursor-pointer'>{e.name}</label>
@@ -128,7 +128,7 @@ export const RightNavBarLi = ({isSelectedLeft, id}: {
                         <a href={e.link}
                            className='text-sm relative inline-block w-full no-underline text-[color:var(--primary-anchor-clr)] pl-[60px] pr-0 py-0'>
                             <span
-                                className={`bg-[position:var(${e.bg})] w-10 h-10 bg-[800px_auto] absolute mt-0 scale-110 left-0 top-0 bg-[image:var(--product-icons)] bg-no-repeat`}></span>
+                                className={`${e.bg} w-10 h-10 bg-[800px_auto] absolute mt-0 scale-110 left-0 top-0 bg-[image:var(--product-icons)] bg-no-repeat`}></span>
                             <span className='w-full block'>
                                 <label
                                     className='text-[22px] tracking-[-0.2px] leading-[1.2] block text-[color:var(--primary-color)] cursor-pointer'>{e.name}</label>

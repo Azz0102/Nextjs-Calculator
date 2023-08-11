@@ -32,7 +32,7 @@ export const Language = ({isToggle, setIsToggle}: {
         }}>
             <span
                 className='bg-[-352px_0] cursor-pointer w-[22px] h-4 relative inline-block bg-[image:var(--country-flags)] bg-no-repeat bg-[528px_auto] mr-2' id='langue'></span>
-            <span className='text-sm font-[opensansregular] uppercase' id='langue'>vi</span>
+            <span className='text-sm font-opensansregular uppercase' id='langue'>vi</span>
         </div>
         <div
             className={` w-[480px] border bg-white absolute duration-[0.5s,0.5s,0.3s] ease-[ease,ease,ease] delay-[0s,0s,0s] transition-[all,visibility,transform]  shadow-[0_11px_90px_0_rgba(65,67,132,0.13)] rounded-[0_0_5px_5px] border-solid border-[#e7ebf0] left-auto right-0 top-16 ${isToggle === '5' ?
@@ -43,14 +43,14 @@ export const Language = ({isToggle, setIsToggle}: {
             <ul className='flex justify-between flex-row flex-wrap ml-[50px] mr-10 mt-10 mb-[30px] max-[650px]:ml-[30px] max-[650px]:mr-5 max-[650px]:mt-[30px] max-[650px]:mb-5'>
                 {languageList.map((e) => {
                     return <li
-                        className={`inline-flex items-center w-6/12 text-[15px] mr-0 mb-5 p-0 font-[opensansregular] max-[650px]:w-full max-[650px]:text-[13px] max-[650px]:mb-4 max-[650px]:p-0 group/li ${e.id % 2 === 0 ? 'pl-5' :
+                        className={`inline-flex items-center w-6/12 text-[15px] mr-0 mb-5 p-0 font-opensansregular max-[650px]:w-full max-[650px]:text-[13px] max-[650px]:mb-4 max-[650px]:p-0 group/li ${e.id % 2 === 0 ? 'pl-5' :
                             ''} `}>
                         <a className={`flex items-center group-hover/li:text-[color:var(--highlight-color)] cursor-pointer ${isLanguage === e.id ?
                             'text-[color:var(--highlight-color)] after:inline-block after:content-[""]'
                             + ' after:w-[13px] after:h-2.5'
                             + ' after:bg-[image:var(--tick-icon)] after:bg-no-repeat after:bg-[100%] after:ml-[7px]' : 'text-[color:var(--primary-color)]'}`}>
                             <span
-                                className={`bg-[image:var(--country-flags)] w-[22px] h-4 relative inline-block bg-[${e.bg}] bg-no-repeat bg-[528px_auto] mr-3`}></span>
+                                className={`bg-[image:var(--country-flags)] w-[22px] h-4 relative inline-block ${e.bg} bg-no-repeat bg-[528px_auto] mr-3`}></span>
                             {e.name}
                         </a>
                     </li>

@@ -36,6 +36,12 @@ module.exports =
                             'box-shadow': '0 0 0 15px rgba(255,255,255,0)'
                         }
                     }
+                },
+                fontFamily: {
+                    zoho: ['Zoho', 'sans-serif'],
+                    opensansregular: ['OpenSans'],
+                    opensanssemibold: ['OpenSans-SemiBold'],
+                    opensansbold: ['OpenSans-Bold'],
                 }
             }
         },

@@ -13,7 +13,7 @@ export const CompanyDropDown = ({isToggle, setIsToggle}: { isToggle: string, set
         }
     }, 'cpny');
 
-    return <li className='cursor-pointer text-[17px] tracking-[-0.2px] relative inline-block mr-[35px] font-[opensansregular]' ref={ref}>
+    return <li className='cursor-pointer text-[17px] tracking-[-0.2px] relative inline-block mr-[35px] font-opensansregular' ref={ref}>
                                 <span className={`${isToggle === '2' ? 'text-[color:var(--highlight-color)]'
                                                                      : 'hover:text-[color:var(--highlight-color)]'}`} onClick={() => {
                                     setIsToggle(() => {
@@ -32,7 +32,7 @@ export const CompanyDropDown = ({isToggle, setIsToggle}: { isToggle: string, set
                                 <span className={`after:content-[""]
                                         after:inline-block after:relative 
                                         after:clear-both after:ml-[7px] after:transition-all after:duration-[0.3s] after:ease-[ease] after:p-[3.3px] after:border-[solid] after:border-[#777] after:border-r
-                                        after:border-b after:border-t-0 after:border-l-0 after:font-[opensansregular]
+                                        after:border-b after:border-t-0 after:border-l-0 after:font-opensansregular
                                         after:-top-0.5 ${isToggle === '2' ? 'after:rotate-[-135deg] after:border-[color:var(--highlight-color)]'
                                                                             + ' after:top-0.5'
                                                                           :
@@ -43,41 +43,41 @@ export const CompanyDropDown = ({isToggle, setIsToggle}: { isToggle: string, set
                                                                                                                                                                                                                                                                                                                         'opacity-100 visible translate-y-[-25px] z-[22] pointer-events-auto' :
                                                                                                                                                                                                                                                                                                                         'opacity-0 invisible z-0 pointer-events-none translate-y-0 '}`}>
             <ul>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Về
                         chúng tôi</a>
                 </li>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Câu
                         chuyện của chúng tôi</a>
                 </li>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Hồi
                         sinh vùng nông thôn</a>
                     <span
                         className='block leading-[0] w-[68%] mt-2.5 mb-[13px] mx-auto border-b-[#e7ebf0] border-b border-solid'></span>
                 </li>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Báo
                         chí</a>
                 </li>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Sự
                         kiện</a>
                     <span
                         className='block leading-[0] w-[68%] mt-2.5 mb-[13px] mx-auto border-b-[#e7ebf0] border-b border-solid'></span>
                 </li>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Nghề
                         nghiệp</a>
                 </li>
-                <li className='font-[opensansregular]'>
+                <li className='font-opensansregular'>
                     <a href='/'
                        className='block text-base leading-[1.1] text-[#111] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] pl-[35px] pr-2.5 pt-1.5 pb-2.5 hover:text-[color:var(--highlight-color)]'>Humans
                         of Zoho</a>

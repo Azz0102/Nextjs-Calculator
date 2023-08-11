@@ -21,9 +21,9 @@ export const MobileMenu = () => {
                 <div
                     className='hidden max-[767px]:fixed max-[767px]:z-[100] max-[767px]:w-full max-[767px]:h-[50px] max-[767px]:shadow-[0_1px_12px_0_rgba(0,0,0,0.1)] max-[767px]:block max-[767px]:bg-[#f8f8f8] max-[767px]:left-0 max-[767px]:bottom-0'>
         <span
-            className={`indent-[0] absolute w-[50px] cursor-pointer h-[50px] transition-all duration-[0.3s] ease-[ease] text-center left-0 top-0 font-[var(--zf-primary-semibold)] ${isToggle ? 'bg-white':'bg-black'}`} onClick={()=>setIsToggle(!isToggle)}>
+            className={`indent-[0] absolute w-[50px] cursor-pointer h-[50px] transition-all duration-[0.3s] ease-[ease] text-center left-0 top-0 font-opensanssemibold ${isToggle ? 'bg-white':'bg-black'}`} onClick={()=>setIsToggle(!isToggle)}>
             <span
-                className={`w-[26px] h-[15px] block relative rotate-[0] transition-[0.5s] duration-[ease-in-out] cursor-pointer pointer-events-none font-[var(--zf-primary-bold)] mt-[18px] mb-0 mx-auto ${isToggle ? 'text-[#757575]': ''}`}>
+                className={`w-[26px] h-[15px] block relative rotate-[0] transition-[0.5s] duration-[ease-in-out] cursor-pointer pointer-events-none font-opensansbold mt-[18px] mb-0 mx-auto ${isToggle ? 'text-[#757575]': ''}`}>
                 <span
                     className={`block absolute h-0.5 w-6/12 opacity-100 transition-[0.25s] duration-[ease-in-out]  ${isToggle ? 'rotate-45 bg-[#8c8c8c] rounded-[9px_0_0_9px] left-1 top-[5px]' : 'bg-white rotate-[0] rounded-[9px_0_0_9px] left-0 top-0'}`}></span>
                 <span
@@ -70,14 +70,14 @@ export const MobileMenu = () => {
                                         <div className={`transition-all duration-[0.3s] ease-[ease] overflow-hidden ${isActive === '1' ? 'block' 
                                                                                                                                          + ' opacity-100 h-28':'opacity-0 h-0'}  pl-0`}>
                                             <ul className='w-full pt-0 pb-1.5 px-0'>
-                                                <li className='block'>
-                                                    <a className={`text-base block text-[#333] duration-[0.3s] ease-[ease] delay-[0s] transition-all cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] `}>Ứng dụng</a>
+                                                <li className='block group/a'>
+                                                    <a className={`text-base block text-[#333] duration-[0.3s] ease-[ease] delay-[0s] transition-all cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]`}>Ứng dụng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className={`text-base block text-[#333] duration-[0.3s] ease-[ease] delay-[0s] transition-all cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]`}>Bộ ứng dụng</a>
+                                                <li className='block group/a'>
+                                                    <a className={`text-base block text-[#333] duration-[0.3s] ease-[ease] delay-[0s] transition-all cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]`}>Bộ ứng dụng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className={`text-base block text-[#333] duration-[0.3s] ease-[ease] delay-[0s] transition-all cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]`}>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className={`text-base block text-[#333] duration-[0.3s] ease-[ease] delay-[0s] transition-all cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]`}>Nền tảng</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -97,23 +97,23 @@ export const MobileMenu = () => {
                                         <div className={`transition-all duration-[0.3s] ease-[ease] overflow-hidden ${isActive === '2' ? 'block'
                                                                                                                                          + ' opacity-100 h-56':'opacity-0 h-0'}  pl-0`}>
                                             <ul className='w-full pt-0 pb-1.5 px-0'>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Ứng dụng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Ứng dụng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Bộ ứng dụng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Bộ ứng dụng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -130,23 +130,23 @@ export const MobileMenu = () => {
                                         <div className={`transition-all duration-[0.3s] ease-[ease] overflow-hidden ${isActive === '3' ? 'block'
                                                                                                                                          + ' opacity-100 h-56':'opacity-0 h-0'}  pl-0`}>
                                             <ul className='w-full pt-0 pb-1.5 px-0'>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Ứng dụng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Ứng dụng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Bộ ứng dụng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Bộ ứng dụng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
-                                                <li className='block'>
-                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px]'>Nền tảng</a>
+                                                <li className='block group/a'>
+                                                    <a className='text-base block text-[#333] transition-[0.3s] duration-[ease] cursor-pointer tracking-[-0.2px] relative pl-3 pr-0 py-[7px] group-hover/a:text-[color:var(--highlight-color)]'>Nền tảng</a>
                                                 </li>
                                             </ul>
                                         </div>

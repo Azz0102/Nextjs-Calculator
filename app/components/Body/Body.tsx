@@ -3,5 +3,5 @@ import React from "react";
 
 export const Body = ({children}: { children: React.ReactNode }) => {
     const overflow = useSelector(selectOverflow)
-    return <body className={`${overflow ? 'overflow-hidden' : ''}`}>{children}</body>
+    return <body className={`${overflow ? 'overflow-hidden' : ''} font-zoho`}>{children}</body>
 }

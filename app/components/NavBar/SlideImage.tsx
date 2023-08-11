@@ -30,10 +30,10 @@ export const SlideImage = ({indexSlide, setIndexSlide}: {
     return <div className='[transform:translate3d(0,0,0)] overflow-hidden relative block m-0 p-0'>
         <div
             className={`opacity-100 w-[2979px] -translate-x-[${indexSlide * 331}px] relative block mx-auto left-0 top-0 after:clear-both after:table after:content-[""] after:box-border duration-1000 ease-[ease] delay-[0s] `}>
-            <li className='w-[331px] block relative float-left h-full min-h-[1px] p-0 font-[opensansregular]'>
+            <li className='w-[331px] block relative float-left h-full min-h-[1px] p-0 font-opensansregular'>
             </li>
             {slideList.map((e) => {
-                               return <li className='w-[331px] block relative float-left h-full min-h-[1px] p-0 font-[opensansregular]'
+                               return <li className='w-[331px] block relative float-left h-full min-h-[1px] p-0 font-opensansregular'
                                           aria-hidden={indexSlide !== e.id}>
                                    < div className='flex flex-col'>
                                        <a className='no-underline [outline:0] text-[color:var(--primary-anchor-clr)]'>
@@ -43,7 +43,7 @@ export const SlideImage = ({indexSlide, setIndexSlide}: {
                                                         src={`${e.image}`}/>
                                                </div>
                                                <div className='pl-[25px] pr-[5px] py-[5px]'>
-                                                   <p className='w-[94%] leading-[1.7] tracking-[-0.2px] mt-0 mb-[15px] mx-0 font-[opensansregular]'>
+                                                   <p className='w-[94%] leading-[1.7] tracking-[-0.2px] mt-0 mb-[15px] mx-0 font-opensansregular'>
                                                        {e.content}</p>
                                                </div>
                                            </div>
