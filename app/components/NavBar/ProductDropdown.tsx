@@ -1,26 +1,28 @@
-import React, {Dispatch, SetStateAction, useState} from "react";
+import React, {Dispatch, SetStateAction, useRef, useState} from "react";
 import {ProductNavBar} from "@/app/components/NavBar/ProductNavBar";
 import {counterSlice, useDispatch} from "@/lib/redux";
+import useOnClickOutside from "@/app/helper/OnClickOutSideHook";
 
 export const ProductDropdown = ({isToggle, setIsToggle}: { isToggle: string, setIsToggle: Dispatch<SetStateAction<string>> }) => {
     const dispatch = useDispatch()
-    return <li className='relative inline-block mr-[35px] font-[opensansregular]'>
+
+    return <li className='relative inline-block mr-[35px] font-[opensansregular]' >
         <span
             className={`cursor-pointer text-[17px] text-[color:var(--primary-color)] tracking-[-0.2px] transition-[color] duration-[0.4s] ease-[ease]
                 after:text-clip hover:text-[color:var(--highlight-color)] ${isToggle === '1' ? 'text-[color:var(--highlight-color)]'
-                : 'hover:text-[color:var(--highlight-color)]'}`} onClick={() => {
-            setIsToggle(() => {
-                if (isToggle !== '1') {
-                    return '1'
-                }
-                else {
-                    return '0'
-                }
-            })
-            dispatch(counterSlice.actions.setOverflow(() => {
-                return true
-            }))
-        }}>Sản phẩm
+                                                                                             : 'hover:text-[color:var(--highlight-color)]'}`}
+            onClick={() => {
+                setIsToggle(() => {
+                    if (isToggle !== '1') {
+                        dispatch(counterSlice.actions.setOverflow(true))
+                        return '1'
+                    }
+                    else {
+                        dispatch(counterSlice.actions.setOverflow(false))
+                        return '0'
+                    }
+                })
+            }} id='SP'>Sản phẩm
                                 <span
                                     className={`after:content-[""]
                                         after:inline-block after:relative 
@@ -28,7 +30,7 @@ export const ProductDropdown = ({isToggle, setIsToggle}: { isToggle: string, set
                                         after:border-b after:border-t-0 after:border-l-0 after:font-[opensansregular]
                                         after:-top-0.5 ${isToggle === '1' ? 'after:rotate-[-135deg] after:border-[color:var(--highlight-color)]'
                                                                             + ' after:top-0.5'
-                                        : 'after:text-[color:var(--primary-color)] after:rotate-45'}`}>
+                                                                          : 'after:text-[color:var(--primary-color)] after:rotate-45'}`}>
                                 </span>
                                 </span>
         <div
@@ -36,10 +38,11 @@ export const ProductDropdown = ({isToggle, setIsToggle}: { isToggle: string, set
             <ul className='ull'></ul>
         </div>
         <div className={`ull fixed w-full h-[580px] bg-white left-0 top-[75px]
-        duration-[0.4s,0.4s] ease-[ease,ease] delay-[0s,0s] transition-[opacity,visibility] ${isToggle === '1' ? 'opacity-100 visible z-[3] pointer-events-auto'
-                                                                                           + ' custom-backdrop' :
-            'opacity-0 invisible z-0 pointer-events-none'}`}>
-            <ProductNavBar setIsToggle={setIsToggle}/>
+        duration-[0.4s,0.4s] ease-[ease,ease] delay-[0s,0s] transition-[opacity,visibility] ${isToggle === '1' ?
+                                                                                              'opacity-100 visible z-[3] pointer-events-auto'
+                                                                                              + ' custom-backdrop' :
+                                                                                              'opacity-0 invisible z-0 pointer-events-none'}`}>
+            <ProductNavBar setIsToggle={setIsToggle} isToggle={isToggle}/>
         </div>
     </li>
 }

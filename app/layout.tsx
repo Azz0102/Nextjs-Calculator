@@ -13,6 +13,7 @@ import {persist, selectOverflow, useSelector} from "@/lib/redux";
 import {Section} from "@/app/components/Section/Section";
 import {Footer} from "@/app/components/Footer/Footer";
 import {Body} from "@/app/components/Body/Body";
+import {MobileMenu} from "@/app/components/MobileMenu/MobileMenu";
 
 
 export default function RootLayout(props: React.PropsWithChildren) {
@@ -25,6 +26,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
                     <Header/>
                     <Section children={props.children}></Section>
                     <Footer/>
+                    <MobileMenu />
                 </PersistGate>
             </Body>
             </html>

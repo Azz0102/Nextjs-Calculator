@@ -25,11 +25,11 @@ export const SlideImage = ({indexSlide, setIndexSlide}: {
             return () => clearInterval(timer);
         }
     });
+    // [transform:translate3d(-${indexSlide * 331}px,0px,0px)] transition-transform
 
     return <div className='[transform:translate3d(0,0,0)] overflow-hidden relative block m-0 p-0'>
         <div
-            className={`opacity-100 w-[2979px] [transform:translate3d(-${indexSlide
-                                                                         * 331}px,0px,0px)] relative block mx-auto left-0 top-0 after:clear-both after:table after:content-[""] after:box-border duration-1000 ease-[ease] delay-[0s] transition-transform`}>
+            className={`opacity-100 w-[2979px] -translate-x-[${indexSlide * 331}px] relative block mx-auto left-0 top-0 after:clear-both after:table after:content-[""] after:box-border duration-1000 ease-[ease] delay-[0s] `}>
             <li className='w-[331px] block relative float-left h-full min-h-[1px] p-0 font-[opensansregular]'>
             </li>
             {slideList.map((e) => {

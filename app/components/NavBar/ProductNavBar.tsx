@@ -1,14 +1,16 @@
-import {Dispatch, SetStateAction, useState} from "react";
+import {Dispatch, SetStateAction, useRef, useState} from "react";
 import {TopNavBarLi} from "@/app/components/NavBar/TopNavBarLi";
 import {LeftNavBarLi} from "@/app/components/NavBar/LeftNavBarLi";
 import {leftNavBarList, topNavBarList} from "@/app/components/NavBar/List";
 import {RightNavBarLi} from "@/app/components/NavBar/RightNavBarLi";
 import {counterSlice, useDispatch} from "@/lib/redux";
+import useOnClickOutside from "@/app/helper/OnClickOutSideHook";
 
-export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAction<string>> }) => {
+export const ProductNavBar = ({isToggle, setIsToggle}: { isToggle: string, setIsToggle: Dispatch<SetStateAction<string>> }) => {
     const dispatch = useDispatch()
     const [isSelected, setIsSelected] = useState('1')
     const [isSelectedLeft, setIsSelectedLeft] = useState('1')
+    const ref = useRef<HTMLDivElement>(null)
 
     const handleSelect = (event: any) => {
         setIsSelected(event.target.id)
@@ -18,7 +20,14 @@ export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAct
         setIsSelectedLeft(event.target.id)
     }
 
-    return <div className='w-full h-full bg-white'>
+    useOnClickOutside(ref, (event: Event) => {
+        if (isToggle == '1') {
+            setIsToggle('0')
+            dispatch(counterSlice.actions.setOverflow(false))
+        }
+    }, 'SP');
+
+    return <div className='w-full h-full bg-white' ref={ref}>
         <div className='flex items-center justify-between bg-[color:var(--bg-color)] relative px-[30px] py-0'>
             <div className='w-[1380px] relative flex justify-start mx-auto my-0'>
                 <ul className='w-auto inline-block pr-2.5 p-0'>
@@ -81,7 +90,8 @@ export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAct
                 <div
                     className={`overflow-hidden absolute w-full h-full bg-white transition-opacity duration-[0.4s] ease-[ease] pt-10 p-0 top-0 ${isSelected
                                                                                                                                                  === '2' ?
-                        'opacity-100 z-[2]' : 'opacity-0 z-[1]'}`}>
+                                                                                                                                                 'opacity-100 z-[2]' :
+                                                                                                                                                 'opacity-0 z-[1]'}`}>
                     <div className='h-full max-w-[1200px] mx-auto my-0'>
                         <div className='relative w-full h-full overflow-visible p-0'>
                             <div>
@@ -176,7 +186,8 @@ export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAct
                 <div
                     className={`bg-[#fed600] overflow-hidden absolute w-full h-full transition-opacity duration-[0.4s] ease-[ease] p-0 top-0 ${isSelected
                                                                                                                                                === '3' ?
-                        'opacity-100 z-[2]' : 'opacity-0 z-[1]'}`}>
+                                                                                                                                               'opacity-100 z-[2]' :
+                                                                                                                                               'opacity-0 z-[1]'}`}>
                     <div className='max-w-[1380px] h-full mx-auto my-0'>
                         <div className='flex items-center w-full h-full relative float-left p-0'>
                             <div className='w-4/5 relative h-full mx-auto my-0 pt-0.5 pb-0 px-0'>
@@ -209,7 +220,8 @@ export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAct
                 </div>
                 <div className={`absolute w-full h-full bg-white transition-opacity duration-[0.4s] ease-[ease] top-0 ${isSelected
                                                                                                                         === '4' ?
-                    'opacity-100 z-[2]' : 'opacity-0 z-[1]'}`}>
+                                                                                                                        'opacity-100 z-[2]' :
+                                                                                                                        'opacity-0 z-[1]'}`}>
                     <div
                         className='relative h-full max-w-[1600px] w-full block overflow-hidden bg-white mx-auto my-0 pt-[50px] pb-0 px-0 border-0'>
                         <div className='w-[38%] float-left ml-[200px] mt-[50px]'>
@@ -234,7 +246,8 @@ export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAct
                 <div
                     className={`bg-[color:var(--bg-blue-color)] absolute w-full h-full transition-opacity duration-[0.4s] ease-[ease] top-0 ${isSelected
                                                                                                                                               === '5' ?
-                        'opacity-100 z-[2]' : 'opacity-0 z-[1]'}`}>
+                                                                                                                                              'opacity-100 z-[2]' :
+                                                                                                                                              'opacity-0 z-[1]'}`}>
                     <div className='flex justify-start h-full'>
                         <div className='max-w-[1100px] bg-transparent mx-auto my-0 pt-[50px] pb-0 px-0'>
                             <div className='w-3/5 float-left'>
@@ -247,7 +260,8 @@ export const ProductNavBar = ({setIsToggle}: { setIsToggle: Dispatch<SetStateAct
                                     phá tất cả ứng dụng</a>
                             </div>
                             <div className='w-[35%] flex items-end h-full float-left ml-[2%]'>
-                                <img alt='h' className='w-full max-w-full h-auto' src='//www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-mobileapp.png'/>
+                                <img alt='h' className='w-full max-w-full h-auto'
+                                     src='//www.zohowebstatic.com/sites/zweb/images/zoho_general_pages/zh-mobileapp.png'/>
                             </div>
                         </div>
                     </div>
