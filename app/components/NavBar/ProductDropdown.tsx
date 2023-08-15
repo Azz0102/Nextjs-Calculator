@@ -22,7 +22,7 @@ export const ProductDropdown = ({isToggle, setIsToggle}: { isToggle: string, set
                         return '0'
                     }
                 })
-            }} id='SP'>Sản phẩm
+            }} id='SP'>Sản phẩmm
                                 <span
                                     className={`after:content-[""]
                                         after:inline-block after:relative 
