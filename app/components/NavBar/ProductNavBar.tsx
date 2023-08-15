@@ -38,7 +38,7 @@ export const ProductNavBar = ({isToggle, setIsToggle}: { isToggle: string, setIs
                 <div className='inline-flex items-center m-0 bottom-0'>
                     <a href='/'
                        className='transition-[background-color] duration-[0.3s] ease-[ease] text-[color:var(--highlight-color)] text-[13px] leading-none inline-block uppercase relative m-0 pl-[25px] pr-[42px] py-0.5 rounded-[unset] border-l-[#d1d5e2] border-0 border-l border-solid after:top-[calc(50%_-_7px)] after:bg-[500px_auto] after:bg-[-107px_-76px] after:content-[""] after:w-[13px] after:h-[13px] after:absolute after:transition-all after:duration-[0.5s] after:ease-[ease] hover:after:scale-100 after:right-[23px] hover:after:right-[15px] after:bg-[image:var(--bg-icon-arrow)] after:bg-no-repeat'>
-                        Khám phá tất cả sản phẩm
+                        Khám phá tất cả sản phẩm1
                     </a>
                 </div>
                 <span className='absolute w-2.5 cursor-pointer flex flex-col justify-center items-center z-[3] left-auto right-3 top-[21px]
